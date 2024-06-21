@@ -1,0 +1,19 @@
+@kccc12312 ➜ /workspaces/Cargo-Loading-with-Dynamic-Programming (main) $ javac CargoLoading.java
+@kccc12312 ➜ /workspaces/Cargo-Loading-with-Dynamic-Programming (main) $ java CargoLoading
+Total Priority Value: 845
+Total Weight: 3950
+Items Chosen:
+1. Name: Emergency Shelter, Priority Value: 80, Weight: 800
+2. Name: Water Purification System, Priority Value: 75, Weight: 300
+3. Name: Portable Toilet, Priority Value: 70, Weight: 250
+4. Name: First Aid Kit, Priority Value: 70, Weight: 300
+5. Name: Medical Supplies, Priority Value: 65, Weight: 350
+6. Name: Personal Hygiene Items, Priority Value: 65, Weight: 150
+7. Name: Safety Gear, Priority Value: 60, Weight: 250
+8. Name: Communication Devices, Priority Value: 60, Weight: 200
+9. Name: Sanitation Supplies, Priority Value: 55, Weight: 200
+10. Name: Baby Formula and Food, Priority Value: 55, Weight: 200
+11. Name: Pet Supplies, Priority Value: 50, Weight: 300
+12. Name: Bottled Water, Priority Value: 50, Weight: 400
+13. Name: Entertainment and Comfort Items, Priority Value: 45, Weight: 150
+14. Name: Fire-starting Supplies, Priority Value: 45, Weight: 100
