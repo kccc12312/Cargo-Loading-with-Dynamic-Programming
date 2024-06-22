@@ -1,0 +1,42 @@
+Function LoadCargoWithDP(cargoItems, maxCapacity):
+
+Input: cargoItems - List of CargoItems (each item has name, weight, priorityValue)
+
+maxCapacity - Integer representing the maximum weight capacity of the plane
+
+Step 1: Initialize DP Table
+Let n be the number of cargoItems
+Create dp array of size (n+1) x (maxCapacity+1) and initialize all values to 0
+
+Step 2: Populate the DP Table
+For i from 1 to n:
+For w from 0 to maxCapacity:
+If cargoItems[i-1].weight <= w:
+dp[i][w] = max(dp[i-1][w],
+dp[i-1][w-cargoItems[i-1].weight] + cargoItems[i-1].priorityValue)
+Else:
+dp[i][w] = dp[i-1][w]
+
+Step 3: Find Total Priority Value and Weight of Optimal Load
+totalPriorityValue = dp[n][maxCapacity]
+totalWeight = 0
+
+Step 4: Identify Items in the Optimal Cargo Load
+Initialize an empty list, itemsChosen
+Set currentWeight to maxCapacity
+For i from n down to 1:
+If dp[i][currentWeight] != dp[i-1][currentWeight]:
+Include cargoItems[i-1] in itemsChosen
+totalWeight += cargoItems[i-1].weight
+currentWeight -= cargoItems[i-1].weight
+
+Step 5: Sort Chosen Items by Priority Value (Descending)
+Sort itemsChosen based on priorityValue in descending order
+
+Step 6: Output Results
+Print "Total Priority Value: " + totalPriorityValue
+Print "Total Weight: " + totalWeight
+Print "Items Chosen:"
+For each item in itemsChosen:
+Print "Name: " + item.name + ", Priority Value: " + item.priorityValue + ", Weight: " + item.weight
+End Function
